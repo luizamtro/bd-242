@@ -10,5 +10,5 @@
 
 * [Avaliações](#avaliações)
 
-* [Atividades](#atividades)
+* [Atividades](#Atividades)
 
