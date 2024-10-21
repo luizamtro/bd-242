@@ -8,7 +8,7 @@
 
 <h2 align="center">Aluna: Ana Luiza Monteiro</h2>
 
-* [Avaliações](#avaliações)
+* [Avaliações](#Avaliacoes)
 
 * [Atividades](#Atividades)
 
