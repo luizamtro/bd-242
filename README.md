@@ -8,7 +8,7 @@
 
 <h2 align="center">Aluna: Ana Luiza Monteiro</h2>
 
-* [Avaliações](#Avaliacoes)
+* [Avaliações](https://github.com/luizamtro/bd-242/tree/main/avaliacoes
+)
 
-* [Atividades](#Atividades)
-
+* [Atividades](https://github.com/luizamtro/bd-242/tree/main/atividades)
