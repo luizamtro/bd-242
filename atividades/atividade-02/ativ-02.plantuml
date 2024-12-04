@@ -1,0 +1,110 @@
+  @startuml Atividade-02
+    entity "TB_media_types" as e01{
+        *id: INTEGER
+        --
+        Name: NVARCHAR(120)
+
+    }
+    entity "TB_genres" as e02{
+         *id: INTEGER
+         --
+         Name:NVARCHAR
+    }
+    entity "TB_playlists" as e03{
+         *id: INTEGER
+         --
+         Name:NVARCHAR(120)
+    }
+    entity "TB_playlist_track" as e04{
+         *playlists_id: INTEGER
+         --
+         *track_id:INTEGER
+    }
+    entity "TB_tracks" as e05{
+         *id: INTEGER
+         Name:NVARCHAR(200)
+         Album_id:INTEGER
+         MediaTypes_id:INTEGER
+         Genre_id:INTEGER
+         Composer:NVARCHAR(220)
+         Miliseconds:INTEGER
+         Bytes:INTEGER
+         UnitPrice: NUMERIC
+
+
+    }
+    entity "TB_artists" as e06{
+         *id: INTEGER
+         --
+         Name:NVARCHAR(120)
+    }
+    entity "TB_albums" as e07{
+         *id: INTEGER
+         --
+         Title:NVARCHAR(160)
+         Artist_id:INTEGER
+    }
+    entity "TB_invoices" as e08{
+         *id: INTEGER
+         --
+         Customer_id:INTEGER
+         InvoiceDate: DATETIME
+         BillingAddress: NVARCHAR
+         BillingCity: NVARCHAR
+    }
+    entity "TB_invoice_items" as e09{
+        *id: INTENGER
+        --
+        Invoice_id: INTENGER
+        track_id: INTEGER
+        UnitPrice: NUMERIC
+        Quantity: INTEGER
+    }
+    entity "TB_Customers" as e10{
+        *id: INTEGER
+        --
+        FirstName: NVARCHAR(40)
+        LastName: NVARCHAR(20)
+        Company: NVARCHAR(80)
+        Customerid: INTEGER
+        Address: NVARCHAR(70)
+        City: NVARCHAR(40)
+        State: NVARCHAR(40)
+        Country: NVARCHAR(40)
+        PostalCode: NVARCHAR(10)
+        Phone: NVARCHAR(24)
+        Fax: NVARCHAR(24)
+        Email: NVARCHAR(60)
+        SupportRepld: INTEGER
+    }
+    entity "TB_employees" as e11{
+         *id: INTEGER
+         --
+        LastName: NVARCHAR(20)
+        FirstName: NVARCHAR(20)
+        Title: NVARCHAR(30)
+        ReportsTo: INTEGER
+        BirthDate: DATETIME
+        HireDate: DATETIME
+        Address: NVARCHAR(70)
+    }
+e01 ||--o{e05
+e02 |o--o{e05
+e03 ||--o|e04
+e05 ||--o|e04
+e05 }o--o|e07
+e05 ||--o{e09
+e06 ||--o{e07
+e08 ||--o{e09
+e08 }o--||e10
+e10 }o--o|e11
+e11 }o--o|e11
+
+
+
+
+
+
+
+
+  @enduml
